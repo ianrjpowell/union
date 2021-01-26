@@ -6,12 +6,12 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Union Site Homepage</title>
+        <title>About us</title>
       </Head>
 
       <main className={styles.main}>
         <Container>
-          <h1>Hello World!</h1>
+          <h1>About Us</h1>
         </Container>
       </main>
 
