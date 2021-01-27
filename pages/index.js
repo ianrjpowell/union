@@ -20,11 +20,11 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
+        <Hero
+          headline="We design &amp; build meaningful spaces"
+          ctaText="Our work"
+        />
         <Container>
-          <Hero
-            headline="We design &amp; build meaningful spaces"
-            ctaText="Our work"
-          />
           <Projects
             headline="Our work"
             subheadline="If you can dream it, we can build it."
@@ -35,23 +35,24 @@ export default function Home() {
             subheadline="Insights from the industry."
             ctaText="See all"
           />
-          <Expertise
-            headline="Expertise"
-            subheadline="Donec id mi porta gravida metus."
-            text="Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Nullam quis risus eget urna."
-            ctaText="Learn more"
-          />
-          <Contact
-            headline="Contact us"
-            subheadline="Maecenas sed diam eget."
-            text="Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
-            ctaText="Contact us"
-          />
-          <Newsletter
-            headline="Newsletter signup"
-            text="Nulla vitae elit libero pharetra augue dolor."
-          />
         </Container>
+        <Expertise
+          headline="Expertise"
+          subheadline="Donec id mi porta gravida metus."
+          text="Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Nullam quis risus eget urna."
+          ctaText="Learn more"
+        />
+        <Contact
+          headline="Contact us"
+          subheadline="Maecenas sed diam eget."
+          text="Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+          ctaText="Contact us"
+        />
+        <Newsletter
+          headline="Newsletter signup"
+          text="Nulla vitae elit libero pharetra augue dolor."
+          ctaText="Subscribe"
+        />
       </main>
 
       <Footer />

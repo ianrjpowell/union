@@ -1,8 +1,11 @@
-const Button = ({ text }) => {
+const Button = ({ text, type }) => {
   return (
-    <div>
-      <span>{text}</span>
-    </div>
+    <>
+      <a href="#" className={`button button--${type || "primary"}`}>
+        {text}
+      </a>
+      <style jsx>{``}</style>
+    </>
   );
 };
 

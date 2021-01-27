@@ -1,5 +1,12 @@
 const Header = () => {
-  return <div></div>;
+  return (
+    <>
+      <header>
+        <img src="" alt="company logo" />
+      </header>
+      <style jsx></style>
+    </>
+  );
 };
 
 export default Header;
