@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import Container from "@material-ui/core/Container";
+import Hero from "../components/sections/Hero";
 
 export default function Home() {
   return (
@@ -11,7 +12,10 @@ export default function Home() {
 
       <main className={styles.main}>
         <Container>
-          <h1>Hello World!</h1>
+          <Hero
+            headline="We design &amp; build meaningful spaces"
+            ctaText="Our work"
+          />
         </Container>
       </main>
 
