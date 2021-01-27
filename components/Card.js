@@ -1,12 +1,22 @@
 import Button from "../components/Button";
 
-const Card = ({ name, description, ctaText }) => {
+const Card = ({
+  elemClass,
+  imagePath,
+  altText,
+  name,
+  description,
+  ctaText,
+}) => {
   return (
-    <div>
-      <h2>{name}</h2>
-      <p>{description}</p>
-      <Button text={ctaText} />
-    </div>
+    <>
+      <div className={elemClass}>
+        <img src={imagePath} alt={altText} />
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <Button text={ctaText} />
+      </div>
+    </>
   );
 };
 

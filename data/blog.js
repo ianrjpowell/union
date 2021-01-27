@@ -1,4 +1,4 @@
-export const articles = [
+export const blog = [
   {
     name: "The importance of Pretend Play",
     description:
