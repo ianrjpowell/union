@@ -13,9 +13,10 @@ const Projects = ({ headline, subheadline, ctaText }) => {
       <Button text={ctaText} />
 
       {/* Loop through project cards here */}
-      {projects.map(({ name, description, ctaText, imagePath }) => {
+      {projects.map(({ name, description, ctaText, imagePath }, i) => {
         return (
           <Card
+            key={i}
             elemClass="card"
             name={name}
             description={description}

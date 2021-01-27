@@ -2,10 +2,19 @@ import Button from "../../components/Button";
 
 const Hero = ({ headline, ctaText }) => {
   return (
-    <div>
-      <h2>{headline}</h2>
-      <Button text={ctaText} />
-    </div>
+    <>
+      <section className="hero">
+        <h2 className="hero__headline">{headline}</h2>
+        <Button text={ctaText} />
+      </section>
+      <style jsx>{`
+        .hero {
+          .hero__headline {
+            color: blue;
+          }
+        }
+      `}</style>
+    </>
   );
 };
 

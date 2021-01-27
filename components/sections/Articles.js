@@ -13,9 +13,10 @@ const Articles = ({ headline, subheadline, ctaText }) => {
       <Button text={ctaText} />
 
       {/* Loop through articles */}
-      {articles.map(({ name, description, ctaText, imagePath }) => {
+      {articles.map(({ name, description, ctaText, imagePath }, i) => {
         return (
           <Card
+            key={i}
             elemClass="slide"
             name={name}
             description={description}
