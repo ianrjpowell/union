@@ -1,6 +1,7 @@
 const Footer = () => {
   return (
     <div>
+      {/* Probably add pages/links & social-media/links to state and pull from there */}
       <nav>
         <ul>
           <li>
