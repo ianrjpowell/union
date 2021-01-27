@@ -7,6 +7,7 @@ const Card = ({
   name,
   description,
   ctaText,
+  buttonType,
 }) => {
   return (
     <>
@@ -14,7 +15,7 @@ const Card = ({
         <img className={`${elemClass}__image`} src={imagePath} alt={altText} />
         <h2 className={`${elemClass}__headline`}>{name}</h2>
         <p className={`${elemClass}__description`}>{description}</p>
-        <Button text={ctaText} />
+        <Button text={ctaText} type={buttonType} />
       </div>
       <style jsx>
         {`
@@ -39,7 +40,7 @@ const Card = ({
               left: -8px;
               width: 100%;
               height: 100%;
-              background: salmon;
+              background: #fcbc5c;
               z-index: -1;
             }
           }

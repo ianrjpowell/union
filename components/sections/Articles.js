@@ -2,9 +2,18 @@ import React from "react";
 import { blog } from "../../data/blog";
 import Button from "../Button";
 import Card from "../Card";
+import Slider from "react-slick";
 
 const Articles = ({ headline, subheadline, ctaText }) => {
   const [articles] = React.useState(blog);
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
     <>
@@ -12,19 +21,21 @@ const Articles = ({ headline, subheadline, ctaText }) => {
         <h2 className="section__headline">{headline}</h2>
         <h3 className="section__subheadline">{subheadline}</h3>
         <Button text={ctaText} />
-
-        {articles.map(({ name, description, ctaText, imagePath }, i) => {
-          return (
-            <Card
-              key={i}
-              elemClass="slide"
-              name={name}
-              description={description}
-              ctaText={ctaText}
-              imagePath={imagePath}
-            />
-          );
-        })}
+        <Slider {...settings}>
+          {articles.map(({ name, description, ctaText, imagePath }, i) => {
+            return (
+              <Card
+                key={i}
+                elemClass="slide"
+                name={name}
+                description={description}
+                ctaText={ctaText}
+                imagePath={imagePath}
+                buttonType="tertiary-dark"
+              />
+            );
+          })}
+        </Slider>
       </section>
       <style jsx>{`
         .section--articles {

@@ -9,7 +9,7 @@ const Expertise = ({ headline, subheadline, text, ctaText }) => {
           <h2 className="section__headline">{headline}</h2>
           <h3 className="section__subheadline">{subheadline}</h3>
           <p className="section__text">{text}</p>
-          <Button text={ctaText} />
+          <Button text={ctaText} type="secondary" />
         </Container>
       </section>
       <style jsx>

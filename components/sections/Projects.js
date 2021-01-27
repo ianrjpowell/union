@@ -13,7 +13,7 @@ const Projects = ({ headline, subheadline, ctaText }) => {
         <h3 className="section__subheadline">{subheadline}</h3>
         <Button text={ctaText} />
 
-        {projects.map(({ name, description, ctaText, imagePath }, i) => {
+        {projects.map(({ name, description, ctaText }, i) => {
           return (
             <Card
               key={i}
@@ -21,7 +21,7 @@ const Projects = ({ headline, subheadline, ctaText }) => {
               name={name}
               description={description}
               ctaText={ctaText}
-              imagePath={imagePath}
+              buttonType="tertiary-light"
             />
           );
         })}
@@ -38,7 +38,6 @@ const Projects = ({ headline, subheadline, ctaText }) => {
           }
         }
       `}</style>
-      {/* Loop through project cards here */}
     </>
   );
 };

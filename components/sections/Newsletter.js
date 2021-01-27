@@ -17,7 +17,7 @@ const Newsletter = ({ headline, text, ctaText }) => {
             id="email"
             placeholder="Email Address"
           />
-          <Button text={ctaText} />
+          <Button text={ctaText} type="secondary" />
 
           <nav className="section__nav">
             <ul className="section__nav-list">
@@ -98,6 +98,8 @@ const Newsletter = ({ headline, text, ctaText }) => {
               padding: 17px;
               width: 100%;
               border: none;
+              display: block;
+              margin-bottom: 5px;
             }
 
             &__nav-list,
