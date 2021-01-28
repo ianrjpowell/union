@@ -8,10 +8,12 @@ const Card = ({ elemClass, name, description, ctaText, buttonType }) => {
   return (
     <>
       <div className={elemClass}>
-        {isSlide && <div className={`${baseClass}__image`}></div>}
-        <h2 className={`${baseClass}__headline`}>{name}</h2>
-        <p className={`${baseClass}__description`}>{description}</p>
-        <Button text={ctaText} type={buttonType} arrow />
+        <div>
+          {isSlide && <div className={`${baseClass}__image`}></div>}
+          <h2 className={`${baseClass}__headline`}>{name}</h2>
+          <p className={`${baseClass}__description`}>{description}</p>
+          <Button text={ctaText} type={buttonType} arrow />
+        </div>
       </div>
       <style jsx>
         {`
@@ -66,16 +68,21 @@ const Card = ({ elemClass, name, description, ctaText, buttonType }) => {
             }
 
             @media (min-width: 768px) {
+              display: flex;
+              align-items: center;
+              &--0 {
+                grid-row: 1 / 3;
+              }
               &--1 {
-                order: 3;
+                grid-row: 1;
               }
 
               &--2 {
-                order: 2;
+                grid-row: 3;
               }
 
               &--3 {
-                order: 4;
+                grid-row: 2 / 4;
               }
             }
           }
@@ -96,6 +103,10 @@ const Card = ({ elemClass, name, description, ctaText, buttonType }) => {
               background-size: cover;
               background-repeat: no-repeat;
               margin-bottom: 20px;
+
+              @media (min-width: 768px) {
+                height: 400px;
+              }
             }
           }
           .slide {

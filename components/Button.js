@@ -36,7 +36,7 @@ const Button = ({ text, type, fullWidth, arrow }) => {
             color: #fff;
             text-transform: uppercase;
             font-weight: 600;
-            padding: 20px 30px;
+            padding: 19px 30px;
             text-decoration: none;
             border-radius: 5px;
             font-size: 20px;
@@ -75,6 +75,10 @@ const Button = ({ text, type, fullWidth, arrow }) => {
           .full-width {
             width: 100%;
             text-align: center;
+
+            @media (min-width: 768px) {
+              width: auto;
+            }
           }
         `}
       </style>

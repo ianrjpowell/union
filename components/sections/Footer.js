@@ -5,20 +5,26 @@ const Footer = () => {
     <>
       <footer className="footer">
         <Container>
-          <p className="footer__copyright">&copy; 2020 Worlds of Wow!</p>
-          <p className="footer__reserved-rights">
-            A <strong>Playcore</strong> Company. All Rights Reserved.
-          </p>
-          <nav className="footer__nav">
-            <ul className="footer__nav-list">
-              <li className="footer__nav-list-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li className="footer__nav-list-item">
-                <a href="#">Terms of Service</a>
-              </li>
-            </ul>
-          </nav>
+          <div className="content-container">
+            <div className="copyright-container">
+              <p className="footer__copyright">&copy; 2020 Worlds of Wow!,</p>
+              <p className="footer__reserved-rights">
+                A <strong>Playcore</strong> Company. All Rights Reserved.
+              </p>
+            </div>
+            <div className="nav-container">
+              <nav className="footer__nav">
+                <ul className="footer__nav-list">
+                  <li className="footer__nav-list-item">
+                    <a href="#">Privacy Policy</a>
+                  </li>
+                  <li className="footer__nav-list-item">
+                    <a href="#">Terms of Service</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </Container>
       </footer>
       <style jsx>
@@ -53,6 +59,32 @@ const Footer = () => {
               font-weight: 600;
               text-decoration: none;
               font-size: 18px;
+            }
+
+            @media (min-width: 768px) {
+              padding: 20px 0;
+              &__copyright,
+              &__reserved-rights {
+                display: inline-block;
+                line-height: 1;
+                margin-bottom: 0;
+                font-size: 16px;
+              }
+
+              &__reserved-rights {
+                margin-left: 10px;
+              }
+
+              &__nav-list-item a {
+                font-size: 16px;
+              }
+            }
+          }
+
+          @media (min-width: 768px) {
+            .content-container {
+              display: flex;
+              justify-content: space-between;
             }
           }
         `}

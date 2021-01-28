@@ -14,18 +14,20 @@ const Projects = ({ headline, subheadline, ctaText }) => {
         <Button text={ctaText} />
 
         <div className="card-container">
-          {projects.map(({ name, description, ctaText }, i) => {
-            return (
-              <Card
-                key={i}
-                elemClass={`card card--${i}`}
-                name={name}
-                description={description}
-                ctaText={ctaText}
-                buttonType="tertiary-light"
-              />
-            );
-          })}
+          <div className="grid-wrapper">
+            {projects.map(({ name, description, ctaText }, i) => {
+              return (
+                <Card
+                  key={i}
+                  elemClass={`card card--${i}`}
+                  name={name}
+                  description={description}
+                  ctaText={ctaText}
+                  buttonType="tertiary-light"
+                />
+              );
+            })}
+          </div>
         </div>
       </section>
       <style jsx>{`
@@ -53,9 +55,12 @@ const Projects = ({ headline, subheadline, ctaText }) => {
         }
 
         @media (min-width: 768px) {
-          .card-container {
-            display: flex;
-            flex-flow: columm wrap;
+          .grid-wrapper {
+            margin-top: 30px;
+            display: grid;
+            grid-gap: 30px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
           }
         }
       `}</style>

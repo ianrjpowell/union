@@ -11,10 +11,12 @@ const Expertise = ({ headline, subheadline, text, ctaText }) => {
           alt="Person illustrating on computer"
         />
         <Container>
-          <h2 className="section__headline">{headline}</h2>
-          <h3 className="section__subheadline">{subheadline}</h3>
-          <p className="section__text">{text}</p>
-          <Button text={ctaText} type="secondary" />
+          <div className="floating-container">
+            <h2 className="section__headline">{headline}</h2>
+            <h3 className="section__subheadline">{subheadline}</h3>
+            <p className="section__text">{text}</p>
+            <Button text={ctaText} type="secondary" />
+          </div>
         </Container>
       </section>
       <style jsx>
@@ -23,6 +25,7 @@ const Expertise = ({ headline, subheadline, text, ctaText }) => {
             background: #f48c24;
             color: #fff;
             padding: 0 0 40px 0;
+            position: relative;
 
             .section {
               &__image {
@@ -52,6 +55,43 @@ const Expertise = ({ headline, subheadline, text, ctaText }) => {
                 font-weight: 300;
                 font-size: 20px;
               }
+            }
+
+            @media (min-width: 768px) {
+              background: transparent;
+              padding: 0;
+
+              .section {
+                &__image {
+                  margin: 0;
+                  line-height: 1;
+                  position: relative;
+                  z-index: -2;
+                }
+              }
+            }
+          }
+
+          @media (min-width: 768px) {
+            .floating-container {
+              position: absolute;
+              bottom: -90px;
+              right: 7%;
+              width: 100%;
+              background: #f48c24;
+              width: 571px;
+              padding: 120px 80px;
+            }
+
+            .floating-container:after {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              bottom: -8px;
+              left: -8px;
+              width: 100%;
+              height: 100%;
+              background: #fcbc5c;
             }
           }
         `}

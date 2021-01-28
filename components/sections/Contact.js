@@ -6,10 +6,14 @@ const Contact = ({ headline, subheadline, text, ctaText }) => {
     <>
       <section className="section section--contact">
         <Container>
-          <h2 className="section__headline">{headline}</h2>
-          <h3 className="section__subheadline">{subheadline}</h3>
-          <p className="section__text">{text}</p>
-          <Button text={ctaText} />
+          <div className="content-container">
+            <div className="section__text-container">
+              <h2 className="section__headline">{headline}</h2>
+              <h3 className="section__subheadline">{subheadline}</h3>
+              <p className="section__text">{text}</p>
+            </div>
+            <Button text={ctaText} />
+          </div>
         </Container>
       </section>
       <style jsx>{`
@@ -46,6 +50,23 @@ const Contact = ({ headline, subheadline, text, ctaText }) => {
             &__text {
               font-size: 20px;
             }
+          }
+
+          @media (min-width: 768px) {
+            padding-top: 180px;
+          }
+        }
+
+        @media (min-width: 768px) {
+          .content-container {
+            display: flex;
+            text-align: left;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          .section__text-container {
+            width: 50%;
           }
         }
       `}</style>

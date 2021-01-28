@@ -77,8 +77,26 @@ export default function Home() {
           margin: 0;
         }
 
+        .h-hide-for-large {
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+
+        .h-show-for-large {
+          display: none;
+
+          @media (min-width: 768px) {
+            display: block;
+          }
+        }
+
         .slick-slider {
           margin-top: 30px;
+
+          @media (min-width: 768px) {
+            margin: 0;
+          }
         }
 
         .slick-list {
@@ -112,6 +130,15 @@ export default function Home() {
 
         .slick-dots li.slick-active button:before {
           color: #f48c24;
+        }
+
+        .slick-prev {
+          left: 3% !important;
+          z-index: 1;
+        }
+        .slick-next {
+          right: 3% !important;
+          z-index: 1;
         }
       `}</style>
     </div>
