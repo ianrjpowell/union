@@ -9,9 +9,10 @@ const Articles = ({ headline, subheadline, ctaText }) => {
 
   var settings = {
     dots: true,
-    infinite: true,
+    arrows: false,
+    infinite: false,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 1.2,
     slidesToScroll: 1,
   };
 
@@ -26,7 +27,7 @@ const Articles = ({ headline, subheadline, ctaText }) => {
             return (
               <Card
                 key={i}
-                elemClass="slide"
+                elemClass={`slide slide--${i}`}
                 name={name}
                 description={description}
                 ctaText={ctaText}
@@ -39,7 +40,7 @@ const Articles = ({ headline, subheadline, ctaText }) => {
       </section>
       <style jsx>{`
         .section--articles {
-          padding: 40px 0;
+          padding: 40px 0 70px 0;
 
           .section {
             &__headline,
@@ -51,8 +52,8 @@ const Articles = ({ headline, subheadline, ctaText }) => {
 
             &__headline {
               letter-spacing: 5px;
-              font-size: 16px;
-              margin-bottom: 10px;
+              font-size: 20px;
+              margin-bottom: 20px;
             }
 
             &__subheadline {

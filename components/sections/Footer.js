@@ -29,10 +29,12 @@ const Footer = () => {
 
             &__copyright {
               margin: 0 0 5px;
+              font-size: 20px;
             }
             &__reserved-rights {
               margin-top: 0;
-              margin-bottom: 20px;
+              margin-bottom: 30px;
+              font-size: 18px;
             }
 
             &__nav-list {
@@ -50,6 +52,7 @@ const Footer = () => {
               color: #2a408f;
               font-weight: 600;
               text-decoration: none;
+              font-size: 18px;
             }
           }
         `}

@@ -14,7 +14,7 @@ const Contact = ({ headline, subheadline, text, ctaText }) => {
       </section>
       <style jsx>{`
         .section--contact {
-          padding: 20px 0;
+          padding: 40px 0;
           text-align: center;
 
           .section {
@@ -32,15 +32,19 @@ const Contact = ({ headline, subheadline, text, ctaText }) => {
 
             &__headline {
               letter-spacing: 4px;
-              font-size: 16px;
-              margin-bottom: 10px;
+              font-size: 20px;
+              margin-bottom: 15px;
             }
 
             &__subheadline {
-              font-size: 32px;
+              font-size: 36px;
               line-height: 1;
               font-weight: 600;
               margin-bottom: 20px;
+            }
+
+            &__text {
+              font-size: 20px;
             }
           }
         }

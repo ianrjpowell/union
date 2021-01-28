@@ -14,14 +14,14 @@ import Footer from "../components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Union Site Homepage</title>
       </Head>
 
       <Header />
 
-      <main className={styles.main}>
+      <main>
         <Hero
           headline="We design &amp; build meaningful spaces"
           ctaText="Our work"
@@ -58,8 +58,62 @@ export default function Home() {
       </main>
 
       <Footer />
+      <style jsx global>{`
+        body {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-family: proxima-nova, sans-serif;
+        }
 
-      <footer className={styles.footer}></footer>
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+          font-family: futura-pt-bold, sans-serif;
+          line-height: 1;
+          margin: 0;
+        }
+
+        .slick-slider {
+          margin-top: 30px;
+        }
+
+        .slick-list {
+          margin: 0 -20px;
+          overflow: visible;
+        }
+
+        .slick-slide > div {
+          margin: 0 20px;
+        }
+
+        .slick-dots {
+          text-align: left;
+        }
+
+        .slick-dots li {
+          width: 6px;
+          height: 6px;
+        }
+
+        .slick-dots li button {
+          width: 6px;
+          height: 6px;
+          padding: 0;
+        }
+        .slick-dots li button:before {
+          width: 6px;
+          height: 6px;
+          color: #f48c24;
+        }
+
+        .slick-dots li.slick-active button:before {
+          color: #f48c24;
+        }
+      `}</style>
     </div>
   );
 }

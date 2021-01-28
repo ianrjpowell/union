@@ -17,7 +17,7 @@ const Newsletter = ({ headline, text, ctaText }) => {
             id="email"
             placeholder="Email Address"
           />
-          <Button text={ctaText} type="secondary" />
+          <Button text={ctaText} type="secondary" fullWidth />
 
           <nav className="section__nav">
             <ul className="section__nav-list">
@@ -86,11 +86,12 @@ const Newsletter = ({ headline, text, ctaText }) => {
               text-transform: uppercase;
               line-height: 1;
               margin: 0 0 15px;
-              font-size: 18px;
+              font-size: 20px;
             }
 
             &__text {
               font-weight: 300;
+              font-size: 20px;
               margin: 0 0 10px;
             }
 
@@ -100,6 +101,7 @@ const Newsletter = ({ headline, text, ctaText }) => {
               border: none;
               display: block;
               margin-bottom: 5px;
+              font-size: 20px;
             }
 
             &__nav-list,
@@ -114,7 +116,7 @@ const Newsletter = ({ headline, text, ctaText }) => {
             }
 
             &__nav-list-item {
-              margin-bottom: 14px;
+              margin-bottom: 25px;
             }
             &__nav-list-item a {
               color: white;
