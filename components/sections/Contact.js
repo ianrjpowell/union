@@ -66,7 +66,7 @@ const Contact = ({ headline, subheadline, text, ctaText }) => {
           }
 
           .section__text-container {
-            width: 50%;
+            width: 60%;
           }
         }
       `}</style>

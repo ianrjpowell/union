@@ -52,6 +52,21 @@ const Projects = ({ headline, subheadline, ctaText }) => {
               margin-bottom: 20px;
             }
           }
+
+          @media (min-width: 768px) {
+            padding: 80px 0 140px;
+
+            .section {
+              &__headline {
+                font-size: 20px;
+                margin-bottom: 50px;
+              }
+
+              &__subheadline {
+                font-size: 60px;
+              }
+            }
+          }
         }
 
         @media (min-width: 768px) {
@@ -60,7 +75,7 @@ const Projects = ({ headline, subheadline, ctaText }) => {
             display: grid;
             grid-gap: 30px;
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
           }
         }
       `}</style>

@@ -67,6 +67,7 @@ const Expertise = ({ headline, subheadline, text, ctaText }) => {
                   line-height: 1;
                   position: relative;
                   z-index: -2;
+                  max-height: 600px;
                 }
               }
             }
@@ -80,7 +81,7 @@ const Expertise = ({ headline, subheadline, text, ctaText }) => {
               width: 100%;
               background: #f48c24;
               width: 571px;
-              padding: 120px 80px;
+              padding: 80px 80px;
             }
 
             .floating-container:after {

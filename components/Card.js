@@ -70,6 +70,7 @@ const Card = ({ elemClass, name, description, ctaText, buttonType }) => {
             @media (min-width: 768px) {
               display: flex;
               align-items: center;
+              justify-content: center;
               &--0 {
                 grid-row: 1 / 3;
               }
